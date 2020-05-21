@@ -9,10 +9,14 @@
 import Foundation
 import CoreData
 
-#error("Change this value to your own firebase database! (and then delete this line)")
+// Change this value to your own firebase database! (and then delete this line
 let baseURL = URL(string: "https://journal-syncing.firebaseio.com/")!
 
 class EntryController {
+    
+    init() {
+        self.fetchEntriesFromServer()
+    }
     
     func createEntry(with title: String, bodyText: String, mood: String) {
         
